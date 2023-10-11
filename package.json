@@ -1,7 +1,7 @@
 {
   "homepage": "https://rahul-raj9367.github.io/my-vue-app/",
   "name": "my-vue-app",
-  "private": true,
+  "private": "false",
   "version": "0.0.0",
   "type": "module",
   "scripts": {

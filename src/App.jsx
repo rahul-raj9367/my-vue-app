@@ -14,21 +14,24 @@ import PoniRice from './pages/PoniRice';
 function App() {
 
   return (
-    <BrowserRouter>
+    <>
+    <BrowserRouter  basename="/my-vue-app">
     <Navbar/>
     <ScrollToTop />
      <Routes>
-        <Route index path="/my-vue-app/" element={<Home />} />
-        <Route path="/my-vue-app/About" element={<About />} />
-        <Route path="/my-vue-app/ContactUs" element={<Contactus />} />
-        <Route path="/my-vue-app/ChengalpattuRice" element={<ChengalpattuRice />} />
-        <Route path="/my-vue-app/DoubleBoiled" element={<DoubleBoiled />} />
-        <Route path="/my-vue-app/IdlyRice" element={<IdlyRice />} />
-        <Route path="/my-vue-app/PoniRice" element={<PoniRice />} />
+        <Route exact path="/" element={<Home />} />
+        <Route path="/About" element={<About />} />
+        <Route path="/ContactUs" element={<Contactus />} />
+        <Route path="/ChengalpattuRice" element={<ChengalpattuRice />} />
+        <Route path="/DoubleBoiled" element={<DoubleBoiled />} />
+        <Route path="/IdlyRice" element={<IdlyRice />} />
+        <Route path="/PoniRice" element={<PoniRice />} />
         <Route path="*" element={<PageError />} />
     </Routes>
     <Footer />
     </BrowserRouter>
+    </>
+    
   )
 }
 
