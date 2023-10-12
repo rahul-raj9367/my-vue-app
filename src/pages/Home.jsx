@@ -1,5 +1,5 @@
-import { Flex ,Box, Heading,Text,Button,Spacer,HStack, useToast, Avatar, AvatarBadge, Container, Center, IconButton} from "@chakra-ui/react";
-import { List, ListIcon, ListItem } from "@chakra-ui/react";
+import { Flex ,Box, Heading,Text,Button,Spacer,HStack, useToast, Avatar, Container, Center, IconButton} from "@chakra-ui/react";
+import {  Link } from "react-router-dom";
 import { Image } from '@chakra-ui/react'
 import { useState ,useEffect} from "react";
 
@@ -43,7 +43,7 @@ export default function Home() {
           <Heading mb="0px" color="blue.900" size={['2xl','2xl','2xl','3xl']}>Chengalpattu Rice</Heading>
           </Center>
           <Box boxSize={['xs','md','lg']} display="flex" alignItems="center" justifyContent="center" mt={["80px","100px"]}>
-            <Image src='images/chengal.png' alt='Dan Abramov' height={["280","335","385","500"]} width={["280","335","385","500"]} />
+            <Link to="/ChengalpattuRice"><Image src='images/chengal.png' alt='Chengalpattu Rice' height={["280","335","385","500"]} width={["280","335","385","500"]} /></Link>
         </Box>
         </Flex>
       </Center>
@@ -55,7 +55,7 @@ export default function Home() {
             < Heading mb="0px" color="blue.900" size={['2xl','2xl','2xl','3xl']}>Ponni Rice</Heading>
           </Center>
         <Box boxSize={['xs','md','lg']} display="flex" alignItems="center" justifyContent="center" mt="70px">
-          <Image src='images/Ponni.png' alt='Dan Abramov' height={["280","335","385","500"]} width={["280","335","385","500"]}  />
+          <Link to="/PoniRice"><Image src='images/Ponni.png' alt='Ponni Rice' height={["280","335","385","500"]} width={["280","335","385","500"]}  /></Link>
         </Box>
       </Flex>
     </Center>  
@@ -68,7 +68,7 @@ export default function Home() {
             <Heading mb="0px" color="blue.900" size={['2xl','2xl','2xl','3xl']}>Idly Rice</Heading>
           </Center>
       <Box boxSize={['xs','md','lg']} display="flex" alignItems="center" justifyContent="center" mt="70px">
-          <Image src='images/idly.png' alt='Dan Abramov' height={["280","335","385","500"]} width={["280","335","385","500"]} />
+      <Link to="/IdlyRice"><Image src='images/idly.png' alt='Ponni Rice' height={["280","335","385","500"]} width={["280","335","385","500"]} /></Link>
       </Box>
     </Flex>
       </Center>
@@ -81,7 +81,7 @@ export default function Home() {
           <Heading mb="0px" color="blue.900" size={['2xl','2xl','2xl','3xl']}>Double Boiled</Heading>
           </Center>
       <Box boxSize={['xs','md','lg']} display="flex" alignItems="center" justifyContent="center" mt="70px">
-          <Image src='images/double.png' alt='Dan Abramov'  height={["280","335","385","500"]} width={["280","335","385","500"]} />
+      <Link to="/DoubleBoiled"><Image src='images/double.png' alt='Double Boiled'  height={["280","335","385","500"]} width={["280","335","385","500"]} /></Link>
       </Box>  
       </Flex>
       </Center>
