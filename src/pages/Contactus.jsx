@@ -6,7 +6,7 @@ import { ArrowBackIcon } from "@chakra-ui/icons";
 export default function Contactus() {
 
   useEffect(() => {
-    document.title = 'Contact Us VV RiceMill';
+    document.title = 'Contact Us-VV RiceMill';
   }, []);
 
   

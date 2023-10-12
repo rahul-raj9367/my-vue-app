@@ -106,7 +106,7 @@ export default function Footer() {
     <Grid  templateColumns={['repeat(1, 1fr)','repeat(2, 1fr)','repeat(2, 1fr)']} gap={6}>
         <GridItem w='100%' h='10'>
             <List mt={["25px","25px","25px","70px"]}  ml={["0px","","60px","80px"]}>
-                <ListItem  color="white" ml="18px">© 2023. VV Rice Mill. </ListItem>
+                <ListItem  color="white" ml="18px">© 2023. VV Rice. </ListItem>
             </List>
         </GridItem>
         <GridItem w='100%' h='10' >
