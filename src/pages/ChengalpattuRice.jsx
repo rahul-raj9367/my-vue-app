@@ -1,5 +1,4 @@
-import { Box, Center, Grid, Heading,Text,GridItem, Image, Flex,Divider,Select,Input,Tabs,TabList,Tab,TabPanels,TabPanel  } from "@chakra-ui/react";
-import { Outlet } from "react-router-dom";
+import { Box, Center, Grid, Heading,Text,GridItem, Image, Flex,Divider,Select,Input,Tabs,TabList,Tab,TabPanels,TabPanel,List, ListItem,ListIcon,} from "@chakra-ui/react";
 import { IconButton,Button } from "@chakra-ui/react";
 import { ArrowBackIcon,ChevronRightIcon } from "@chakra-ui/icons";
 import { Tooltip } from '@chakra-ui/react'
@@ -15,6 +14,7 @@ import {
   Td,
   TableContainer,
 } from '@chakra-ui/react'
+import {  CheckCircleIcon } from '@chakra-ui/icons'
 
 export default function ChengalpattuRice() {
   const [count,setcount]=useState(0);
@@ -64,9 +64,37 @@ export default function ChengalpattuRice() {
               <Button color="blue.900"  _hover={{ bg: 'blue.900', color: 'white' }}> In Stock</Button>
               <Heading mt="8px" color="blue.900">Chengalpattu Rice</Heading>
               <Heading size='md' mt="8px" fontWeight="500"  color="blue.900">₹225.00 – ₹4,500.00</Heading>
-              <Box height={["100%",150]} width={["90vw","","80vw",450]}alignContent="center" mt="18px">
-                <Text lineHeight={7} color="blue.900">Rice is the most central and important food crop in the world. Amongst, Chengalpattu rice turns out to be very aromatic and flavorful. These carefully handpicked paddy is mostly from the farm lands of river tamirabarani belt. This type is especially known for Kanyakumari regional use. 
-                This category rice is best for both home consumption and commercial purpose.</Text>
+              <Box height={["100%",150]} width={["90vw","","80vw",400]}alignContent="center" mt="18px">
+                {/* <Text lineHeight={7} color="blue.900">Rice is the most central and important food crop in the world. Amongst, Chengalpattu rice turns out to be very aromatic and flavorful. These carefully handpicked paddy is mostly from the farm lands of river tamirabarani belt. This type is especially known for Kanyakumari regional use.  */}
+                {/* This category rice is best for both home consumption and commercial purpose.</Text> */}
+                <List spacing={2}>
+                  <ListItem>
+                  <ListIcon as={CheckCircleIcon} color='green.500' />
+                    Premium South Indian rice.
+                  </ListItem>
+                  <ListItem>
+                  <ListIcon as={CheckCircleIcon} color='green.500' />
+                  Aromatic and flavorful
+                  </ListItem>
+                  <ListItem>
+                  <ListIcon as={CheckCircleIcon} color='green.500' />
+                  Local economic importance
+                  </ListItem>
+                  <ListItem>
+                  <ListIcon as={CheckCircleIcon} color='green.500' />
+                  Health benefits.
+                  </ListItem>
+                  <ListItem>
+                  <ListIcon as={CheckCircleIcon} color='green.500' />
+                    Traditional and sustainable.
+                  </ListItem>
+                  <ListItem>
+                  <ListIcon as={CheckCircleIcon} color='green.500' />
+                  Grown in Tamil Nadu and Kerala
+                  </ListItem>
+                  
+
+                </List>
                 <Box style={{ position: "relative" }}>
                 <Divider
                   position="absolute"
@@ -79,7 +107,7 @@ export default function ChengalpattuRice() {
                 />
               </Box>
               </Box>
-              <Box mt="50px">
+              <Box mt={["30px","65px"]}>
                 <form action="">
                   <Flex>
                     <Box mr={["10px","20px"]}>
@@ -106,7 +134,7 @@ export default function ChengalpattuRice() {
                     </Box>
                   </Flex>
                   </form>
-                  <Box style={{ position: "relative" }} width={["90vw","","80vw",450]} mt="10px">
+                  <Box style={{ position: "relative" }} width={["90vw","","80vw",400]} mt="5px">
                     <Divider
                       position="absolute"
                       top="0"
@@ -143,14 +171,43 @@ export default function ChengalpattuRice() {
             {/* <Center> */}
             <Box ml={["10px","10px","10px","10px","120px"]}>
               <Heading color="blue.900" size='md' mt="20px" mb="20px">Specifications:</Heading>
-              <Text height={['100%','100%','100%','100%','100%',150]} width={['100%','100%','100%','100%',540]} color="blue.900" lineHeight={1.8}>Rice is the most central and important food crop in the world. Amongst, Chengalpattu rice turns out to be very aromatic and flavorful. These carefully handpicked paddy is mostly from the farm lands of river tamirabarani belt. This type is especially known for Kanyakumari regional use. This category rice is best for both home consumption and commercial purpose.</Text>
+              {/* <Text height={['100%','100%','100%','100%','100%',150]} width={['100%','100%','100%','100%',540]} color="blue.900" lineHeight={1.8}>Rice is the most central and important food crop in the world. Amongst, Chengalpattu rice turns out to be very aromatic and flavorful. These carefully handpicked paddy is mostly from the farm lands of river tamirabarani belt. This type is especially known for Kanyakumari regional use. This 
+              category rice is best for both home consumption and commercial purpose.</Text> */}
+              <List spacing={2}>
+                  <ListItem>
+                  <ListIcon as={CheckCircleIcon} color='green.500' />
+                    Premium South Indian rice.
+                  </ListItem>
+                  <ListItem>
+                  <ListIcon as={CheckCircleIcon} color='green.500' />
+                  Aromatic and flavorful
+                  </ListItem>
+                  <ListItem>
+                  <ListIcon as={CheckCircleIcon} color='green.500' />
+                  Local economic importance
+                  </ListItem>
+                  <ListItem>
+                  <ListIcon as={CheckCircleIcon} color='green.500' />
+                  Health benefits.
+                  </ListItem>
+                  <ListItem>
+                  <ListIcon as={CheckCircleIcon} color='green.500' />
+                    Traditional and sustainable.
+                  </ListItem>
+                  <ListItem>
+                  <ListIcon as={CheckCircleIcon} color='green.500' />
+                  Grown in Tamil Nadu and Kerala
+                  </ListItem>
+                  
+
+                </List>
             </Box>
             {/* </Center> */}
           </GridItem>
           <GridItem w='100%' h='100%'>
             <Box>
-              <Heading  color="blue.900" size='md'  mt="20px" mb="20px">Care & Maintenance:</Heading>
-              <Text height={['100%','100%','100%','100%',150]} width={['100%','100%','100%','100%',540]} color="blue.900" lineHeight={1.8}>Main Required Content Required Content Required Content Required Content Required Content Required Content Required Content Required Content Required Content Required Content Required </Text>
+              <Heading ml={["10px","0px"]} color="blue.900" size='md'  mt="20px" mb="20px">Care & Maintenance:</Heading>
+              <Text ml={["10px","0px"]} height={['100%','100%','100%','100%',150]} width={['100%','100%','100%','100%',540]} color="blue.900" lineHeight={1.8}>Main Required Content Required Content Required Content Required Content Required Content Required Content Required Content Required Content Required Content Required Content Required </Text>
             </Box>
           </GridItem>
          </Grid>

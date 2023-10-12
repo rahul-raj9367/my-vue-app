@@ -49,7 +49,6 @@ export default function Navbar() {
             color="black"  bg="transparent" _hover={{ bg: 'transparent' }}
             onClick={()=>ChangeDisplay('flex')}/>
             <a href='/my-vue-app/'>
-                {/* <Avatar name='Dan Abrahmov'   size={['lg','lg','xl','xl']} ml={['10px','10px','30px']} mt="0px" /> */}
                 <Image borderRadius='full' boxSize={['60px','60px','80px','80px']}  src='images/vv1.png' alt='VV Rice Mill' ml={["8px","15px"]} />
             </a>
          

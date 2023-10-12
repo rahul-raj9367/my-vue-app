@@ -1,4 +1,4 @@
-import { Box, Center, Grid, Heading,Text,GridItem, Image, Flex,Divider,Select,Input,Tabs,TabList,Tab,TabPanels,TabPanel  } from "@chakra-ui/react";
+import { Box, Center, Grid, Heading,Text,GridItem, Image, Flex,Divider,Select,Input,Tabs,TabList,Tab,TabPanels,TabPanel,List, ListItem,ListIcon,  } from "@chakra-ui/react";
 import { Outlet } from "react-router-dom";
 import { IconButton,Button } from "@chakra-ui/react";
 import { ArrowBackIcon,ChevronRightIcon } from "@chakra-ui/icons";
@@ -15,7 +15,7 @@ import {
   Td,
   TableContainer,
 } from '@chakra-ui/react'
-
+import {  CheckCircleIcon } from '@chakra-ui/icons'
 
 export default function IdlyRice() {
   const [count,setcount]=useState(0);
@@ -65,8 +65,30 @@ export default function IdlyRice() {
               <Button color="blue.900"  _hover={{ bg: 'blue.900', color: 'white' }}> In Stock</Button>
               <Heading mt="8px" color="blue.900">Idly Rice</Heading>
               <Heading size='md' mt="8px" fontWeight="500"  color="blue.900">₹200.00 – ₹4,000.00</Heading>
-              <Box height={["100%",150]} width={["90vw","","80vw",450,600]}alignContent="center" mt="18px">
-                <Text lineHeight={7} color="blue.900">Idlis are the great source of energy especially for south Indians and known to be the world’s no:1 best breakfast. The paddy is purchased from the farm fields of cauvery river belt.  Rather than using normal par boiled rice, making use of processed half par boiled Idli (Just is Idli) rice, will make the idlis much more tastier and healthier. This rice is obviously known for its softness and fluffy texture of the idli. It undergoes the half boil process inorder to retain its minerals and vitamins.</Text>
+              <Box height={["100%",150]} width={["90vw","","80vw",450]}alignContent="center" mt="18px">
+                {/* <Text lineHeight={7} color="blue.900">Idlis are the great source of energy especially for south Indians and known to be the world’s no:1 best breakfast. The paddy is purchased from the farm fields of cauvery river belt.  Rather than using normal par boiled rice, making use of processed half par boiled Idli (Just is Idli) rice, will make the idlis much more tastier and healthier. This rice is obviously known for its softness and fluffy texture of the idli. It undergoes the half boil process inorder to retain its minerals and vitamins.</Text> */}
+                <List spacing={3}>
+                  <ListItem>
+                  <ListIcon as={CheckCircleIcon} color='green.500' />
+                  A short-grain parboiled rice.
+                  </ListItem>
+                  <ListItem>
+                  <ListIcon as={CheckCircleIcon} color='green.500' />
+                  Health benefits
+                  </ListItem>
+                  <ListItem>
+                  <ListIcon as={CheckCircleIcon} color='green.500' />
+                  Ideal for making soft and fluffy idly and dosa.
+                  </ListItem>
+                  <ListItem>
+                  <ListIcon as={CheckCircleIcon} color='green.500' />
+                  Popular in South Indian cuisine.
+                  </ListItem>
+                  <ListItem>
+                  <ListIcon as={CheckCircleIcon} color='green.500' />
+                  Soaked, ground, and fermented for traditional preparation.
+                  </ListItem>
+                </List>
                 <Box style={{ position: "relative" }}>
                 <Divider
                   position="absolute"
@@ -79,7 +101,7 @@ export default function IdlyRice() {
                 />
               </Box>
               </Box>
-              <Box mt={["40px","","","80px","50px"]}>
+              <Box mt={["25px","","","80px","50px"]}>
                 <form action="">
                   <Flex>
                     <Box mr={["10px","20px"]}>
@@ -106,7 +128,7 @@ export default function IdlyRice() {
                     </Box>
                   </Flex>
                   </form>
-                  <Box style={{ position: "relative" }} width={["90vw","","80vw",450,600]} mt={["","","","10px"]}>
+                  <Box style={{ position: "relative" }} width={["90vw","","80vw",450]} mt={["5px","","","10px"]}>
                     <Divider
                       position="absolute"
                       top="0"
@@ -143,14 +165,36 @@ export default function IdlyRice() {
             {/* <Center> */}
             <Box ml={["10px","10px","10px","10px","120px"]}>
               <Heading color="blue.900" size='md' mt="20px" mb="20px">Specifications:</Heading>
-              <Text height={['100%','100%','100%','100%','100%',150]} width={['100%','100%','100%','100%',540]} color="blue.900" lineHeight={1.8}>Idlis are the great source of energy especially for south Indians and known to be the world’s no:1 best breakfast. The paddy is purchased from the farm fields of cauvery river belt.  Rather than using normal par boiled rice, making use of processed half par boiled Idli (Just is Idli) rice, will make the idlis much more tastier and healthier. This rice is obviously known for its softness and fluffy texture of the idli. It undergoes the half boil process inorder to retain its minerals and vitamins.</Text>
+              {/* <Text height={['100%','100%','100%','100%','100%',150]} width={['100%','100%','100%','100%',540]} color="blue.900" lineHeight={1.8}>Idlis are the great source of energy especially for south Indians and known to be the world’s no:1 best breakfast. The paddy is purchased from the farm fields of cauvery river belt.  Rather than using normal par boiled rice, making use of processed half par boiled Idli (Just is Idli) rice, will make the idlis much more tastier and healthier. This rice is obviously known for its softness and fluffy texture of the idli. It undergoes the half boil process inorder to retain its minerals and vitamins.</Text> */}
+              <List spacing={3}>
+                  <ListItem>
+                  <ListIcon as={CheckCircleIcon} color='green.500' />
+                  A short-grain parboiled rice.
+                  </ListItem>
+                  <ListItem>
+                  <ListIcon as={CheckCircleIcon} color='green.500' />
+                  Health benefits
+                  </ListItem>
+                  <ListItem>
+                  <ListIcon as={CheckCircleIcon} color='green.500' />
+                  Ideal for making soft and fluffy idly and dosa.
+                  </ListItem>
+                  <ListItem>
+                  <ListIcon as={CheckCircleIcon} color='green.500' />
+                  Popular in South Indian cuisine.
+                  </ListItem>
+                  <ListItem>
+                  <ListIcon as={CheckCircleIcon} color='green.500' />
+                  Soaked, ground, and fermented for traditional preparation.
+                  </ListItem>
+                </List>
             </Box>
             {/* </Center> */}
           </GridItem>
           <GridItem w='100%' h='100%'>
             <Box>
-              <Heading  color="blue.900" size='md'  mt="20px" mb="20px">Care & Maintenance:</Heading>
-              <Text height={['100%','100%','100%','100%',150]} width={['100%','100%','100%','100%',540]} color="blue.900" lineHeight={1.8}>Main Required Content Required Content Required Content Required Content Required Content Required Content Required Content Required Content Required Content Required Content Required </Text>
+              <Heading  ml={["10px","0px"]} color="blue.900" size='md'  mt="20px" mb="20px">Care & Maintenance:</Heading>
+              <Text ml={["10px","0px"]} height={['100%','100%','100%','100%',150]} width={['100%','100%','100%','100%',540]} color="blue.900" lineHeight={1.8}>Main Required Content Required Content Required Content Required Content Required Content Required Content Required Content Required Content Required Content Required Content Required </Text>
             </Box>
           </GridItem>
          </Grid>
