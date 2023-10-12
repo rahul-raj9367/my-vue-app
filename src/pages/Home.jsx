@@ -43,7 +43,7 @@ export default function Home() {
           <Heading mb="0px" color="blue.900" size={['2xl','2xl','2xl','3xl']}>Chengalpattu Rice</Heading>
           </Center>
           <Box boxSize={['xs','md','lg']} display="flex" alignItems="center" justifyContent="center" mt={["80px","100px"]}>
-            <Link to="/ChengalpattuRice"><Image src='images/chengal.png' alt='Chengalpattu Rice' height={["280","335","385","500"]} width={["280","335","385","500"]} /></Link>
+            <Link to="/ChengalpattuRice"><Image src='images/chengal.png' cursor="pointer" alt='Chengalpattu Rice' height={["280","335","385","500"]} width={["280","335","385","500"]} /></Link>
         </Box>
         </Flex>
       </Center>

@@ -41,16 +41,16 @@ export default function About() {
             </Flex>
           </GridItem>
           <GridItem w='100%' h='100%' >
-            <Box   height={["500px","","","400px","500px"]} ml={["","","","25px","",""]}>
+            <Box   height={["510px","","","400px","500px"]} ml={["","","","25px","",""]}>
               <Flex alignItems="center" justifyContent={["space-evenly","center","center","normal"]}>
-              <Heading pt={["40px","20px"]} color="blue.900" >About Us</Heading>
+              <Heading pt={["40px","0px"]} color="blue.900" >About Us</Heading>
 
               </Flex>
             <Flex alignItems="center" justifyContent={["center","center","center","flex-start"]} >
               
-            <Heading color="blue.900" mt="30px" size="lg" as="cite" lineHeight={["35px","50px"]} width={['80vw','80vw','80vw','50vw','500px']}> Sri Seenivasan Traders Established in 2013.Which include only hulling section.
-               Later developed into a boiler modern unit was opened in the year 2017 Named SRI SEENIVASAN MODERN RICE MILL. 
-               under the administration at the property Mr. V. Velmurugan</Heading>
+            <Heading color="blue.900" mt="20px" size="lg" as="cite" lineHeight={["35px","50px"]} width={['85vw','80vw','80vw','50vw','550px']}> Sri Seenivasan Traders Established in 2013.Which include only hulling section.
+               Later developed into a boiler modern unit was opened in the year 2017 Named SRI SEENIVASAN MODERN RICE MILL. Our Product Brand is VV Rice .
+               Under the administration at the property <br />Mr. V. Velmurugan</Heading>
             </Flex>
             </Box>
           </GridItem>
