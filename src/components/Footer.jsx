@@ -82,7 +82,7 @@ export default function Footer() {
                         <Heading as='h1' size='sm' color="white" mb="10px">Product’s inquiries</Heading>
                         </ListItem>
                         <ListItem size='sm' color="white">Contact with us?</ListItem>
-                        <ListItem size='sm' color="white" cursor="pointer"><a href="mailto: Sriseenivasanricemill2013@gmail.com">contact@VVricemill.in</a></ListItem>
+                        <ListItem size='sm' color="white" cursor="pointer"><a href="mailto: Sriseenivasanricemill2013@gmail.com">contact@vvrice.in</a></ListItem>
                     </List>
                 {/* </Center> */}
             </GridItem>
