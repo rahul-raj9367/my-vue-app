@@ -1,4 +1,4 @@
-import { Flex ,Box, Heading,Text,Button,Spacer,HStack, useToast, Avatar, Container, Center, IconButton} from "@chakra-ui/react";
+import { Flex ,Box, Heading,Text,Button,Spacer,HStack, CSSReset , Avatar, Container, Center, IconButton} from "@chakra-ui/react";
 import {  Link } from "react-router-dom";
 import { Image } from '@chakra-ui/react'
 import { useState ,useEffect} from "react";
@@ -34,6 +34,71 @@ export default function Home() {
       document.title = 'VV Rice Mill';
     }, []);
 
+    const [showImage, setShowImage] = useState(false);
+
+
+    useEffect(() => {
+      const delay = setTimeout(() => {
+        setShowImage(true);
+      }, 100); // 2-second delay in milliseconds
+  
+      return () => {
+        clearTimeout(delay); // Cleanup to prevent memory leaks
+      };
+    }, []);
+
+
+
+    const [showImage2, setShowImage2] = useState(false);
+    const [showImage3, setShowImage3] = useState(false);
+    const [showImage4, setShowImage4] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+     
+      const scrollFour=1500;
+      const scrollThree = 900;
+      const scrolltwo=420
+      if(!showImage2 && scrollTop > scrolltwo){
+        setShowImage2(true);
+      } else if(!showImage3 && scrollTop > scrollThree){
+        setShowImage3(true);
+      } else if(!showImage4 && scrollTop >scrollFour){
+        setShowImage4(true)
+      }
+    };
+
+    // Add an event listener to update the component state when the user scrolls the page.
+    window.addEventListener('scroll', handleScroll);
+
+    // Remove the event listener when the component unmounts to avoid memory leaks.
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [showImage2,showImage3,showImage4]);
+
+
+  // const [scrollY, setScrollY] = useState(0);
+
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setScrollY(window.scrollY);
+  //   };
+
+  //   window.addEventListener('scroll', handleScroll);
+
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, []); // Empty dependency array to run the effect only once after mounting.
+
+  // // Log scroll positions to the console
+  // useEffect(() => {
+  //   console.log("Vertical Scroll Position (scrollY):", scrollY);
+  // }, [scrollY]);
+
+
   return (
     <>
     <Box bg="blue.300">
@@ -42,8 +107,12 @@ export default function Home() {
           <Center>
           <Heading mb="0px" color="blue.900" size={['2xl','2xl','2xl','3xl']}>Chengalpattu Rice</Heading>
           </Center>
-          <Box boxSize={['xs','md','lg']} display="flex" alignItems="center" justifyContent="center" mt={["80px","100px"]}>
-            <Link to="/ChengalpattuRice"><Image src='images/chengal.png' cursor="pointer" alt='Chengalpattu Rice' height={["280","335","385","500"]} width={["280","335","385","500"]} /></Link>
+          <CSSReset />
+          <Box boxSize={['xs','md','lg']} display="flex" alignItems="center" justifyContent="center" mt={["80px","100px"]} overflow="hidden">
+            <Link to="/ChengalpattuRice"><Image src='images/chengal.png' cursor="pointer" alt='Chengalpattu Rice' 
+             transform={`translateX(${showImage ? 0 : '-100%'})`}
+             transition="transform 1.2s ease" 
+            height={["280","335","385","500"]} width={["280","335","385","500"]} /></Link>
         </Box>
         </Flex>
       </Center>
@@ -54,8 +123,12 @@ export default function Home() {
           <Center>
             < Heading mb="0px" color="blue.900" size={['2xl','2xl','2xl','3xl']}>Ponni Rice</Heading>
           </Center>
-        <Box boxSize={['xs','md','lg']} display="flex" alignItems="center" justifyContent="center" mt="70px">
-          <Link to="/PoniRice"><Image src='images/Ponni.png' alt='Ponni Rice' height={["280","335","385","500"]} width={["280","335","385","500"]}  /></Link>
+          <CSSReset />
+        <Box boxSize={['xs','md','lg']} display="flex" alignItems="center" justifyContent="center" mt="70px" overflow="hidden">
+          <Link to="/PoniRice"><Image src='images/Ponni.png' alt='Ponni Rice'
+          transform={`translateX(${showImage2 ? 0 : '100%'})`}
+          transition="transform 1.2s ease" 
+          height={["280","335","385","500"]} width={["280","335","385","500"]}  /></Link>
         </Box>
       </Flex>
     </Center>  
@@ -67,8 +140,12 @@ export default function Home() {
           <Center>
             <Heading mb="0px" color="blue.900" size={['2xl','2xl','2xl','3xl']}>Idly Rice</Heading>
           </Center>
-      <Box boxSize={['xs','md','lg']} display="flex" alignItems="center" justifyContent="center" mt="70px">
-      <Link to="/IdlyRice"><Image src='images/idly.png' alt='Ponni Rice' height={["280","335","385","500"]} width={["280","335","385","500"]} /></Link>
+          <CSSReset />
+      <Box boxSize={['xs','md','lg']} display="flex" alignItems="center" justifyContent="center" mt="70px" overflow="hidden">
+      <Link to="/IdlyRice"><Image src='images/idly.png' alt='Ponni Rice' 
+      transform={`translateX(${showImage3 ? 0 : '-100%'})`}
+      transition="transform 1.2s ease" 
+      height={["280","335","385","500"]} width={["280","335","385","500"]} /></Link>
       </Box>
     </Flex>
       </Center>
@@ -80,8 +157,12 @@ export default function Home() {
           <Center>
           <Heading mb="0px" color="blue.900" size={['2xl','2xl','2xl','3xl']}>Double Boiled</Heading>
           </Center>
-      <Box boxSize={['xs','md','lg']} display="flex" alignItems="center" justifyContent="center" mt="70px">
-      <Link to="/DoubleBoiled"><Image src='images/double.png' alt='Double Boiled'  height={["280","335","385","500"]} width={["280","335","385","500"]} /></Link>
+          <CSSReset />
+      <Box boxSize={['xs','md','lg']} display="flex" alignItems="center" justifyContent="center" mt="70px" overflow="hidden">
+      <Link to="/DoubleBoiled"><Image src='images/double.png' alt='Double Boiled'  
+      transform={`translateX(${showImage4 ? 0 : '100%'})`}
+      transition="transform 1.2s ease" 
+      height={["280","335","385","500"]} width={["280","335","385","500"]} /></Link>
       </Box>  
       </Flex>
       </Center>
