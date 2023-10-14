@@ -111,7 +111,7 @@ export default function Home() {
           <Box boxSize={['xs','md','lg']} display="flex" alignItems="center" justifyContent="center" mt={["80px","100px"]} overflow="hidden">
             <Link to="/ChengalpattuRice"><Image src='images/chengal.png' cursor="pointer" alt='Chengalpattu Rice' 
              transform={`translateX(${showImage ? 0 : '-100%'})`}
-             transition="transform 1.2s ease" 
+             transition="transform 1.1s ease" 
             height={["280","335","385","500"]} width={["280","335","385","500"]} /></Link>
         </Box>
         </Flex>
@@ -127,7 +127,7 @@ export default function Home() {
         <Box boxSize={['xs','md','lg']} display="flex" alignItems="center" justifyContent="center" mt="70px" overflow="hidden">
           <Link to="/PoniRice"><Image src='images/Ponni.png' alt='Ponni Rice'
           transform={`translateX(${showImage2 ? 0 : '100%'})`}
-          transition="transform 1.2s ease" 
+          transition="transform 1.1s ease" 
           height={["280","335","385","500"]} width={["280","335","385","500"]}  /></Link>
         </Box>
       </Flex>
@@ -144,7 +144,7 @@ export default function Home() {
       <Box boxSize={['xs','md','lg']} display="flex" alignItems="center" justifyContent="center" mt="70px" overflow="hidden">
       <Link to="/IdlyRice"><Image src='images/idly.png' alt='Ponni Rice' 
       transform={`translateX(${showImage3 ? 0 : '-100%'})`}
-      transition="transform 1.2s ease" 
+      transition="transform 1.1s ease" 
       height={["280","335","385","500"]} width={["280","335","385","500"]} /></Link>
       </Box>
     </Flex>
@@ -161,7 +161,7 @@ export default function Home() {
       <Box boxSize={['xs','md','lg']} display="flex" alignItems="center" justifyContent="center" mt="70px" overflow="hidden">
       <Link to="/DoubleBoiled"><Image src='images/double.png' alt='Double Boiled'  
       transform={`translateX(${showImage4 ? 0 : '100%'})`}
-      transition="transform 1.2s ease" 
+      transition="transform 1.1s ease" 
       height={["280","335","385","500"]} width={["280","335","385","500"]} /></Link>
       </Box>  
       </Flex>
