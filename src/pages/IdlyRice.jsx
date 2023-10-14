@@ -117,7 +117,7 @@ export default function IdlyRice() {
                       <Select placeholder='In Stock' value={selectedOption} onChange={handleSelectChange}  htmlSize={3} width='auto'>
                         <option value='5'>5 kg</option>
                         <option value='10'>10 kg</option>
-                        <option value='25'>25 kg</option>
+                        <option value='26'>26 kg</option>
                         <option value='50'>50 kg</option>
                         <option value='100'>100 kg</option>
                       </Select>
