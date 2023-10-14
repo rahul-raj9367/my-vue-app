@@ -34,16 +34,15 @@ export default function Home() {
       document.title = 'VV Rice Mill';
     }, []);
 
+
     const [showImage, setShowImage] = useState(false);
-
-
     useEffect(() => {
       const delay = setTimeout(() => {
         setShowImage(true);
-      }, 100); // 2-second delay in milliseconds
+      }, 100); 
   
       return () => {
-        clearTimeout(delay); // Cleanup to prevent memory leaks
+        clearTimeout(delay); 
       };
     }, []);
 
@@ -56,10 +55,11 @@ export default function Home() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-     
-      const scrollFour=1500;
-      const scrollThree = 900;
+      
       const scrolltwo=420
+      const scrollThree = 950;
+      const scrollFour=1550;
+      
       if(!showImage2 && scrollTop > scrolltwo){
         setShowImage2(true);
       } else if(!showImage3 && scrollTop > scrollThree){
@@ -134,7 +134,7 @@ export default function Home() {
     </Center>  
     </Box>
     
-    <Box bg="blue.300">
+    <Box bg="blue.300" >
       <Center>
       <Flex flexDir="column"  mt="120px">
           <Center>
