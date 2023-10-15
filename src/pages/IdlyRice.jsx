@@ -65,7 +65,7 @@ export default function IdlyRice() {
               <Button color="blue.900"  _hover={{ bg: 'blue.900', color: 'white' }}> In Stock</Button>
               <Heading mt="8px" color="blue.900">Idly Rice</Heading>
               <Heading size='md' mt="8px" fontWeight="500"  color="blue.900">₹200.00 – ₹4,000.00</Heading>
-              <Box height={["100%",150]} width={["90vw","","80vw",450]}alignContent="center" mt="18px">
+              <Box height={["100%",150]} width={["90vw","","80vw",400]}alignContent="center" mt="18px">
                 {/* <Text lineHeight={7} color="blue.900">Idlis are the great source of energy especially for south Indians and known to be the world’s no:1 best breakfast. The paddy is purchased from the farm fields of cauvery river belt.  Rather than using normal par boiled rice, making use of processed half par boiled Idli (Just is Idli) rice, will make the idlis much more tastier and healthier. This rice is obviously known for its softness and fluffy texture of the idli. It undergoes the half boil process inorder to retain its minerals and vitamins.</Text> */}
                 <List spacing={3}>
                   <ListItem>
@@ -101,7 +101,7 @@ export default function IdlyRice() {
                 />
               </Box>
               </Box>
-              <Box mt={["25px","","","80px","50px"]}>
+              <Box mt={["25px","","45px","80px","50px"]}>
                 <form action="">
                   <Flex>
                     <Box mr={["10px","20px"]}>
@@ -128,7 +128,7 @@ export default function IdlyRice() {
                     </Box>
                   </Flex>
                   </form>
-                  <Box style={{ position: "relative" }} width={["90vw","","80vw",450]} mt={["5px","","","10px"]}>
+                  <Box style={{ position: "relative" }} width={["90vw","","80vw",400]} mt={["5px","","","10px"]}>
                     <Divider
                       position="absolute"
                       top="0"
