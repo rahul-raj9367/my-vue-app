@@ -9,6 +9,7 @@ import {
   import { HamburgerIcon, CloseIcon} from "@chakra-ui/icons"
 import { NavLink,Link } from "react-router-dom";
 import { useState ,useEffect} from "react";
+import '../style.css'
 
 export default function Navbar() {
  const [display,ChangeDisplay]=useState('none')
@@ -36,9 +37,14 @@ export default function Navbar() {
         transition: 'background-color 0.3s ease-in-out',
     };
   return (
-    <>
-    <Box as="div" position={["fixed"]} top="0" left="0" alignItems="center"  justifyContent="center" zIndex={99}>
-        <Flex as="nav" style={navStyle}  width="100vw" >
+    <Box   maxWidth="1900px !important" margin="0 auto !important" >
+    <Box as="div"    
+     alignItems="center" position={["fixed","fixed","fixed","fixed","fixed","static"]}   top="0" left="0" justifyContent="center" zIndex={99}     >
+    
+
+    <Box display="flex" alignItems="center" justifyContent="center" >  
+        <Flex as="nav" style={navStyle}  width="100vw"    gap={100} alignItems="center"  justify={["space-between","space-between","space-between","space-between"]}>
+            <Box display='flex'>
             <IconButton
             mt="13px"
             ml="10px"
@@ -49,13 +55,51 @@ export default function Navbar() {
             color="black"  bg="transparent" _hover={{ bg: 'transparent' }}
             onClick={()=>ChangeDisplay('flex')}/>
             <a href='/my-vue-app/'>
-                <Image borderRadius='full' boxSize={['60px','60px','80px','80px']}  src='images/vv1.png' alt='VV Rice Mill' ml={["8px","15px"]} />
+                <Image borderRadius='full' className="NAV" boxSize={['60px','60px','80px','80px']}  src='images/vv1.png' alt='VV Rice Mill' ml={["0px","15px"]} />
             </a>
+            </Box>
+            
          
-        <Spacer/>
 
-        {/*Mobile View  */}
-        <Flex
+
+       
+        
+        {/* DeskTop View  */}
+       <Box  mr={{sm:"0px",lg:"10px",xl:"170px"}} pr="0px"  display="flex" alignItems="center"  justifyContent={['none','none',"flex-end","flex-end"]}>
+            <List display={['none','none','flex','flex']}  alignItems={['none','none',"center","center"]} justifyContent={['none','none',"flex-end","flex-end"]}>
+                <ListItem mr="40px">
+                    <NavLink >
+                    <Menu>
+                        <MenuButton as="h2">
+                            <Text fontSize='lg' as='cite' color="blue.900">Our Products</Text>
+                        </MenuButton>
+                        <MenuList >
+                        <Link to="/ChengalpattuRice" onClick={()=>ChangeDisplay('none')}><MenuItem><Text fontSize='sm' as='cite' color="blue.900">Chengalpattu Rice</Text></MenuItem></Link>
+                        <Link to="/PoniRice" onClick={()=>ChangeDisplay('none')}><MenuItem><Text fontSize='sm' as='cite' color="blue.900">Ponni Rice</Text></MenuItem></Link>
+                        <Link to="/IdlyRice" onClick={()=>ChangeDisplay('none')}><MenuItem><Text fontSize='sm' as='cite' color="blue.900">Idly Rice</Text></MenuItem></Link>
+                        <Link to="/DoubleBoiled" onClick={()=>ChangeDisplay('none')}><MenuItem><Text fontSize='sm' as='cite' color="blue.900">Double Boiled</Text></MenuItem></Link>
+                        </MenuList>
+                        </Menu>
+                    </NavLink>
+                </ListItem>
+                <ListItem  mr="40px">
+                    <NavLink>
+                    <Link to="/About" onClick={()=>ChangeDisplay('none')}><Text fontSize='lg' as='cite' color="blue.900">About</Text></Link>
+                    </NavLink>
+                </ListItem>
+                <ListItem  mr="40px">
+                    <NavLink >
+                    <Link to="/ContactUs" onClick={()=>ChangeDisplay('none')}><Text fontSize='lg' as='cite' color="blue.900">Contact Us</Text></Link>
+                    </NavLink>
+                </ListItem>
+            </List>
+        </Box>
+       
+
+
+
+         {/*Mobile View  */}
+         <Flex
             w="85vw"
             h="100vh"
             bgColor="gray.50"
@@ -113,40 +157,12 @@ export default function Navbar() {
                 </Flex>
         </Flex>
         {/*Mobile View  */}
-        
-        {/* DeskTop View  */}
-       <Container mr={{sm:"0px",lg:"10px",xl:"170px"}} pr="0px"  display="flex" alignItems="center"  justifyContent={['none','none',"flex-end","flex-end"]}>
-            <List display={['none','none','flex','flex']}  alignItems={['none','none',"center","center"]} justifyContent={['none','none',"flex-end","flex-end"]}>
-                <ListItem mr="40px">
-                    <NavLink >
-                    <Menu>
-                        <MenuButton as="h2">
-                            <Text fontSize='lg' as='cite' color="blue.900">Our Products</Text>
-                        </MenuButton>
-                        <MenuList >
-                        <Link to="/ChengalpattuRice" onClick={()=>ChangeDisplay('none')}><MenuItem><Text fontSize='sm' as='cite' color="blue.900">Chengalpattu Rice</Text></MenuItem></Link>
-                        <Link to="/PoniRice" onClick={()=>ChangeDisplay('none')}><MenuItem><Text fontSize='sm' as='cite' color="blue.900">Ponni Rice</Text></MenuItem></Link>
-                        <Link to="/IdlyRice" onClick={()=>ChangeDisplay('none')}><MenuItem><Text fontSize='sm' as='cite' color="blue.900">Idly Rice</Text></MenuItem></Link>
-                        <Link to="/DoubleBoiled" onClick={()=>ChangeDisplay('none')}><MenuItem><Text fontSize='sm' as='cite' color="blue.900">Double Boiled</Text></MenuItem></Link>
-                        </MenuList>
-                        </Menu>
-                    </NavLink>
-                </ListItem>
-                <ListItem  mr="40px">
-                    <NavLink>
-                    <Link to="/About" onClick={()=>ChangeDisplay('none')}><Text fontSize='lg' as='cite' color="blue.900">About</Text></Link>
-                    </NavLink>
-                </ListItem>
-                <ListItem  mr="40px">
-                    <NavLink >
-                    <Link to="/ContactUs" onClick={()=>ChangeDisplay('none')}><Text fontSize='lg' as='cite' color="blue.900">Contact Us</Text></Link>
-                    </NavLink>
-                </ListItem>
-            </List>
-        </Container>
+
         </Flex>
     </Box>
-    </>
+         
+    </Box>
+    </Box>
     
    
   )

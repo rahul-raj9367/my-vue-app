@@ -2,6 +2,7 @@ import { Grid, GridItem ,Box, Text, Heading, Container, Center, Flex,IconButton}
 import {  Link } from "react-router-dom";
 import { List, ListIcon, ListItem ,Image} from "@chakra-ui/react";
 import { useState ,useEffect} from "react";
+import '../style.css'
 
 import {  ArrowUpIcon } from '@chakra-ui/icons'
 export default function Footer() {
@@ -30,7 +31,10 @@ export default function Footer() {
     };
 
   return (
-    <Box bg="black" h={["745","700","550","550","400"]} as='footer'>
+    <Box bg="black" >
+
+   
+    <Box h={["745","700","550","550","400"]} as='footer' className='NAV'>
         <Box position="fixed" right={["15px","30px"]} bottom={["15px","30px"]} cursor="pointer" zIndex={99}>
       <a href="https://wa.me/7708274306"  target="_blank">
       <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="60" height="60" viewBox="0 0 48 48">
@@ -127,6 +131,6 @@ export default function Footer() {
         </Grid>
     </Box>
     </Box>
-
+    </Box>
   )
 }

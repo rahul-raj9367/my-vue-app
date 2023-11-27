@@ -16,6 +16,7 @@ import {
   TableContainer,
 } from '@chakra-ui/react'
 import {  CheckCircleIcon } from '@chakra-ui/icons'
+import '../style.css'
 
 export default function PoniRice() {
   const [count,setcount]=useState(0);
@@ -35,6 +36,7 @@ export default function PoniRice() {
   }, []);
   return (
     <>
+    <Box className="NAV">
     <Tooltip hasArrow label='Home' bg='gray.100' color="blue.900">
       <Box position="fixed" left="30px" top="130px" cursor="pointer"  zIndex="1">
         <a href="/my-vue-app/"><IconButton 
@@ -42,7 +44,7 @@ export default function PoniRice() {
         p="20px"
         borderRadius="50%"
         bg="gray.100"
-        display={["none","none","none","none","flex"]}
+        display={["none","none","none","none","flex","none"]}
         icon={<ArrowBackIcon  boxSize={8}  color="blue.900" />}
         ></IconButton></a>
         </Box>
@@ -152,8 +154,11 @@ export default function PoniRice() {
         </Grid>
       </Box>
 
+    </Box>
+      
 
-      <Box mt="100px">
+      <Box  bg="gray.50">
+      <Box mt="100px" className="NAV">
       <Tabs borderColor="transparent"  >
       <TabList >
         <Tab as="b" color="blue.900" cursor="pointer" ml={["10px","10px","10px","10px","120px",]} mr="20px">Description</Tab>
@@ -161,7 +166,7 @@ export default function PoniRice() {
       </TabList>
 
       <TabPanels >
-        <TabPanel  bg="gray.50">
+        <TabPanel >
          <Grid templateColumns={['repeat(1, 1fr)','repeat(1, 1fr)','repeat(2, 1fr)']} gap={[0,6]}>
           <GridItem w='100%' h='100%'>
             {/* <Center> */}
@@ -225,6 +230,9 @@ export default function PoniRice() {
       </TabPanels>
     </Tabs>
       </Box>
+
+      </Box>
+   
 
     </>
   )

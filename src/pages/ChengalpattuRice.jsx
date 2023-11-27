@@ -15,7 +15,7 @@ import {
   TableContainer,
 } from '@chakra-ui/react'
 import {  CheckCircleIcon } from '@chakra-ui/icons'
-
+import '../style.css'
 export default function ChengalpattuRice() {
   const [count,setcount]=useState(0);
 
@@ -33,8 +33,10 @@ export default function ChengalpattuRice() {
     document.title = 'Chengalpattu Rice-VV RiceMill';
   }, []);
   return (
-    <>
-    <Tooltip hasArrow label='Home' bg='gray.100' color="blue.900">
+    <Box >
+      <Box className="NAV">
+
+      <Tooltip hasArrow label='Home' bg='gray.100' color="blue.900">
       <Box position="fixed" left="30px" top="130px" cursor="pointer"  zIndex="1">
         <a href="/my-vue-app/"><IconButton 
         boxSize={10}
@@ -45,9 +47,9 @@ export default function ChengalpattuRice() {
         icon={<ArrowBackIcon  boxSize={8}  color="blue.900" />}
         ></IconButton></a>
         </Box>
-      </Tooltip>
+    </Tooltip>
     
-      <Box mt={["100px","150px"]} ml={["20px","30px","80px","120px"]}>
+      <Box  mt={["100px","150px"]} ml={["20px","30px","80px","120px"]}>
           <Text as='cite' size='xs' color="blue.900">VV Rice 
           <ChevronRightIcon boxSize={5} color="red.500" /><b> Chengalpattu Rice</b></Text>
       </Box>
@@ -156,8 +158,11 @@ export default function ChengalpattuRice() {
         </Grid>
       </Box>
 
+      </Box>
+   
 
-      <Box mt="100px">
+      <Box  bg="gray.50">
+      <Box mt="100px" className="NAV">
       <Tabs borderColor="transparent"  >
       <TabList >
         <Tab as="b" color="blue.900" cursor="pointer" ml={["10px","10px","10px","10px","120px",]} mr="20px">Description</Tab>
@@ -165,8 +170,8 @@ export default function ChengalpattuRice() {
       </TabList>
 
       <TabPanels >
-        <TabPanel  bg="gray.50">
-         <Grid templateColumns={['repeat(1, 1fr)','repeat(1, 1fr)','repeat(2, 1fr)']} gap={[0,6]}>
+        <TabPanel >
+         <Grid templateColumns={['repeat(1, 1fr)','repeat(1, 1fr)','repeat(2, 1fr)']} gap={[0,6]} >
           <GridItem w='100%' h='100%'>
             {/* <Center> */}
             <Box ml={["10px","10px","10px","10px","120px"]}>
@@ -236,8 +241,9 @@ export default function ChengalpattuRice() {
       </TabPanels>
     </Tabs>
       </Box>
+      </Box>
 
-    </>
+    </Box>
     
   )
 }

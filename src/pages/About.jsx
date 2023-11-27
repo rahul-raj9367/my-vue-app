@@ -1,7 +1,7 @@
 import { Box,Center,Heading,Text ,AspectRatio,Tooltip,IconButton ,Image,Grid,GridItem,Flex} from '@chakra-ui/react'
 import React from 'react'
 import { useEffect } from 'react';
-
+import '../style.css'
 import { ArrowBackIcon } from "@chakra-ui/icons";
 
 export default function About() {
@@ -13,27 +13,33 @@ export default function About() {
   
   return (
     <>
+    <Box  >
+      
     <Tooltip hasArrow label='Home' bg='gray.100' color="blue.900">
+    
+
+   
       <Box position="fixed" left="30px" top="130px" cursor="pointer"  zIndex="1">
         <a href="/my-vue-app/"><IconButton 
         boxSize={10}
         p="20px"
         borderRadius="50%"
         bg="gray.100"
-        display={["none","none","none","none","flex"]}
+        display={["none","none","none","none","flex","none"]}
         icon={<ArrowBackIcon  boxSize={8}  color="blue.900" />}
         ></IconButton></a>
         </Box>
       </Tooltip>
 
-
-      <Box height="500px" bg="blue.300" >
+      <Box bg="blue.300">
+      <Box height="500px" className='NAV' >
         <Box>
           <Center><Heading mt="250px" size="2xl" color="blue.900">ABOUT VV RICE MILL</Heading></Center>
         </Box>
       </Box>
+      </Box>
 
-      <Box pt="100px" pb="100px"  >
+      <Box pt="100px" pb="100px"  className='NAV'>
         <Grid templateColumns={['repeat(1, 1fr)','repeat(1, 1fr)',,'repeat(2, 1fr)']}>
           <GridItem w='100%' h='100%'>
             <Flex alignItems="center" justifyContent={["center","","",""]} >
@@ -56,6 +62,8 @@ export default function About() {
           </GridItem>
 
         </Grid>
+        
+      </Box>
       </Box>
 
     </>
