@@ -16,7 +16,7 @@ export default function PageError() {
         p="20px"
         borderRadius="50%"
         bg="gray.100"
-        display={["none","none","none","none","flex"]}
+        display={["none","none","none","none","flex","none"]}
         icon={<ArrowBackIcon  boxSize={8}  color="blue.900" />}
         ></IconButton></a>
         </Box>
