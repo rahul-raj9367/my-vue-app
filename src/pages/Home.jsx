@@ -2,10 +2,16 @@ import { Flex ,Box, Heading,Text,Button,Spacer,HStack, CSSReset , Avatar, Contai
 import {  Link } from "react-router-dom";
 import { Image } from '@chakra-ui/react'
 import { useState ,useEffect} from "react";
-
+import Aos from 'aos';
+import 'aos/dist/aos.css'
 import { ArrowUpIcon } from "@chakra-ui/icons"
 
 export default function Home() {
+
+  useEffect(()=>{
+    Aos.init()
+  },[])
+
   const [display,setDisplay]=useState('none')
   useEffect(() => {
     const handleScroll = () => {
@@ -33,7 +39,6 @@ export default function Home() {
     useEffect(() => {
       document.title = 'VV Rice Mill';
     }, []);
-
 
     const [showImage, setShowImage] = useState(false);
     useEffect(() => {
@@ -78,26 +83,8 @@ export default function Home() {
     };
   }, [showImage2,showImage3,showImage4]);
 
-
-  // const [scrollY, setScrollY] = useState(0);
-
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     setScrollY(window.scrollY);
-  //   };
-
-  //   window.addEventListener('scroll', handleScroll);
-
-  //   return () => {
-  //     window.removeEventListener('scroll', handleScroll);
-  //   };
-  // }, []); // Empty dependency array to run the effect only once after mounting.
-
-  // // Log scroll positions to the console
-  // useEffect(() => {
-  //   console.log("Vertical Scroll Position (scrollY):", scrollY);
-  // }, [scrollY]);
-
+    
+  
 
   return (
     <>
@@ -108,10 +95,9 @@ export default function Home() {
           <Heading mb="0px" color="blue.900" size={['2xl','2xl','2xl','3xl']}>Chengalpattu Rice</Heading>
           </Center>
           <CSSReset />
-          <Box boxSize={['xs','md','lg']} display="flex" alignItems="center" justifyContent="center" mt={["80px","100px"]} overflow="hidden">
-            <Link to="/ChengalpattuRice"><Image src='images/chengal.png' cursor="pointer" alt='Chengalpattu Rice' 
-             transform={`translateX(${showImage ? 0 : '-100%'})`}
-             transition="transform 1.1s ease" 
+          <Box  boxSize={['xs','md','lg']} display="flex" alignItems="center" justifyContent="center" mt={["80px","100px"]} overflow="hidden">
+            <Link to="/ChengalpattuRice"><Image  transform={`translateX(${showImage ? 0 : '100%'})`}
+             transition="transform 1.1s ease"  src='images/chengal.png' cursor="pointer" alt='Chengalpattu Rice' 
             height={["280","335","385","500"]} width={["280","335","385","500"]} /></Link>
         </Box>
         </Flex>
@@ -125,9 +111,7 @@ export default function Home() {
           </Center>
           <CSSReset />
         <Box boxSize={['xs','md','lg']} display="flex" alignItems="center" justifyContent="center" mt="70px" overflow="hidden">
-          <Link to="/PoniRice"><Image src='images/Ponni.png' alt='Ponni Rice'
-          transform={`translateX(${showImage2 ? 0 : '100%'})`}
-          transition="transform 1.1s ease" 
+          <Link to="/PoniRice"><Image data-aos="fade-right" data-aos-delay="100" src='images/Ponni.png' alt='Ponni Rice'
           height={["280","335","385","500"]} width={["280","335","385","500"]}  /></Link>
         </Box>
       </Flex>
@@ -142,9 +126,7 @@ export default function Home() {
           </Center>
           <CSSReset />
       <Box boxSize={['xs','md','lg']} display="flex" alignItems="center" justifyContent="center" mt="70px" overflow="hidden">
-      <Link to="/IdlyRice"><Image src='images/idly.png' alt='Ponni Rice' 
-      transform={`translateX(${showImage3 ? 0 : '-100%'})`}
-      transition="transform 1.1s ease" 
+      <Link to="/IdlyRice"><Image  data-aos="fade-left" data-aos-delay="100"  src='images/idly.png' alt='Ponni Rice' 
       height={["280","335","385","500"]} width={["280","335","385","500"]} /></Link>
       </Box>
     </Flex>
@@ -158,10 +140,8 @@ export default function Home() {
           <Heading mb="0px" color="blue.900" size={['2xl','2xl','2xl','3xl']}>Double Boiled</Heading>
           </Center>
           <CSSReset />
-      <Box boxSize={['xs','md','lg']} display="flex" alignItems="center" justifyContent="center" mt="70px" overflow="hidden">
-      <Link to="/DoubleBoiled"><Image src='images/double.png' alt='Double Boiled'  
-      transform={`translateX(${showImage4 ? 0 : '100%'})`}
-      transition="transform 1.1s ease" 
+      <Box boxSize={['xs','md','lg']}   display="flex" alignItems="center" justifyContent="center" mt="70px" overflow="hidden">
+      <Link to="/DoubleBoiled"><Image data-aos="fade-right" data-aos-delay="100"  src='images/double.png' alt='Double Boiled'  
       height={["280","335","385","500"]} width={["280","335","385","500"]} /></Link>
       </Box>  
       </Flex>
