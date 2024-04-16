@@ -125,7 +125,7 @@ export default function Footer() {
     <Grid  templateColumns='repeat(1, 1fr)' gap={6}>
         <GridItem w='100%' h='10'>
             <List mt={["10px","70px"]}  ml={["10px","80px"]}  textAlign={["left","right"]}>
-                <ListItem  color="white" ml={["10px","18px"]} mr="120px">Web Developed By <Text fontSize='lg' as='b' color="red"><a href="https://rahul-raj9367.github.io/Portfolio/" target='blank'>Rahul Raj</a></Text></ListItem>
+                <ListItem  color="white" ml={["10px","18px"]} mr="120px">Web Developed By <Text fontSize='lg' as='b' color="red"><a href="https://rahul-raj9367.github.io/portfolio/" target='blank'>Rahul Raj</a></Text></ListItem>
             </List>
         </GridItem>
         </Grid>
